@@ -1,0 +1,17 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: openjdk
+    tag: jdk
+
+inputs:
+- name: anniversaries-api
+
+outputs:
+- name: artifact
+
+run:
+  path: ./anniversaries-api/ci/tasks/test.sh
+
